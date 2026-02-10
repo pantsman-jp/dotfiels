@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.automatically_reload_config = true
-config.font = wezterm.font('Fira Code')
+config.font = wezterm.font_with_fallback({"Fira Code", "Noto Sans Mono CJK JP"})
 config.font_size = 18
 config.initial_cols = 120
 config.initial_rows = 30
