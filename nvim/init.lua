@@ -1,3 +1,5 @@
+vim.cmd [[packadd packer.nvim]]
+
 -- 基本オプションの設定
 require('options')
 
@@ -5,4 +7,4 @@ require('options')
 require('keymaps')
 
 -- プラグインの設定
--- require('plugins')
+require('plugins')

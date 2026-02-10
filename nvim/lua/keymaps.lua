@@ -5,3 +5,5 @@ local opts = { noremap = true, silent = true }
 map('n', '<leader>ff', '<cmd>Telescope find_files<cr>', opts)
 map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', opts)
 map('n', 'lg', ':terminal lazygit<CR>', opts)
+
+vim.api.nvim_set_keymap('n', '<leader>e', ':Oil<CR>', { noremap = true, silent = true })
