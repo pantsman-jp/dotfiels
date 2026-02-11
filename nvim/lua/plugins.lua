@@ -1,7 +1,17 @@
-return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'nvim-tree/nvim-web-devicons'
-
-  use { 'stevearc/oil.nvim', config = function() require('plugin.oil') end }
-  use { 'lewis6991/gitsigns.nvim', config = function() require('plugin.gitsigns') end }
-end)
+require("lazy").setup({
+  {
+    "lewis6991/gitsigns.nvim",
+    config = true,
+  },
+  {
+    "stevearc/oil.nvim",
+    config = true,
+  },
+  {
+    "goolord/alpha-nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("alpha").setup(require("alpha.themes.dashboard").config)
+    end,
+  },
+})
