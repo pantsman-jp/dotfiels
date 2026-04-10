@@ -14,4 +14,10 @@ require("lazy").setup({
       require("alpha").setup(require("alpha.themes.dashboard").config)
     end,
   },
+  {
+  "vlime/vlime",
+  config = function()
+    vim.g.vlime_compiler = "sbcl"
+  end
+  },
 })
