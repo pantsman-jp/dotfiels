@@ -15,9 +15,10 @@ require("lazy").setup({
     end,
   },
   {
-  "vlime/vlime",
-  config = function()
-    vim.g.vlime_compiler = "sbcl"
-  end
+    "vlime/vlime",
+    lazy = false,
+    config = function()
+      vim.g.vlime_compiler = "sbcl"
+    end
   },
 })
